@@ -1,0 +1,21 @@
+﻿@model CamdenRidge.Models.Event
+
+@{
+    Layout = "";
+}
+
+
+<h2>Upcoming Events</h2>
+
+@if (Model.ID == 0)
+{
+    <p>
+        There are no upcoming events at this time.
+    </p>
+}
+else
+{
+    <p>@Html.Raw(Model.Name) - @Html.Raw(Model.Date.ToString("MM/dd/yyyy"))</p>
+    <p>@Html.Raw(Model.Description)</p>
+    <p>@Html.ActionLink("Read more »", "ViewEvent", "Events", new { id = Model.ID }, new { @class = "btn btn-default" })</p>
+}

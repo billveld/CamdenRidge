@@ -1,0 +1,38 @@
+﻿@model CamdenRidge.Models.EventViewModel
+@{
+    ViewBag.Title = "Events";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Events</h2>
+
+
+@if (Model.ShowAdminControls == true)
+{
+    <p>
+        @Html.ActionLink("Admin Index", "Index")
+    </p>
+}
+<table class="data-table">
+    @foreach (var month in Model.Events.OrderBy(x=>x.Date).Select(x => x.Date.Month).Distinct().ToList())
+    {
+        <tr class="dirviewtitle">
+            <td>@Html.Raw(System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month))</td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    @foreach (var item in Model.Events.Where(x => x.Date.Month == month).OrderBy(x => x.Date).ToList())
+                    {
+                        <li>
+                            @Html.ActionLink(item.Date.ToString("MM/dd/yyyy") + " - " + item.Name, "ViewEvent", new { id = item.ID })
+                            
+                            <br />
+                            @Html.Raw(item.Description)
+                        </li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,17 @@
+﻿@model CamdenRidge.Models.Newsletter
+
+@{
+    Layout = "";
+}
+
+<h2>Newsletter</h2>
+@if (Model.ID == 0)
+{
+    <p>There is no newsletter available at this time.</p>
+}
+else
+{
+    <p>@Html.Raw(Model.Title)</p>
+    <p>@Html.Raw(Model.ShortDescription)</p>
+    <p>@Html.ActionLink("Read more »", "ViewNewsletter", "Newsletters", new { id = Model.ID }, new { @class = "btn btn-default" })</p>
+}
