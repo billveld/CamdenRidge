@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using CamdenRidge.DAL;
+
 using CamdenRidge.Models;
 using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.WindowsAzure.Storage;
@@ -16,7 +16,7 @@ namespace CamdenRidge.Controllers
 {
     public class NewslettersController : Controller
     {
-        private CamdenRidgeContext db = new CamdenRidgeContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Newsletters
         public ActionResult Index()

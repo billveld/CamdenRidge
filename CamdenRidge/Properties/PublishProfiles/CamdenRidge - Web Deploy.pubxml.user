@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAP8vdplYwZkmpkCjo4ctTggAAAAACAAAAAAADZgAAwAAAABAAAABG7Hy688Y0E7Ar2NsnWumOAAAAAASAAACgAAAAEAAAALdNZ1lbN6O1RbuaVShcdt2AAAAAGrqtCYynshBrE1M+I/BFkjqPzj7p3ZgDVFSzRJbzjahtkiuuzf8F4XJxMBjVOcSXHR5K+JcJ/zFZEYAr47rVpyLbZ6j2+vcQkgSibzpX7oYA7DDIOKsgLFJ8KE7rVRTllFvrcW2/4jC9jNkk9DYt4ihyRaZeoVvM5aexlU2pB48UAAAAcU/fuei1srG3syo2be7Fi49MyJg=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=tcp:camdenridgedbserver.database.windows.net,1433;Initial Catalog=CamdenRidge_aspnet_db;User Id=billveldman@camdenridgedbserver;Password=Gazowrath12" />
+    <AzureDBConnectionStrings Include="Data Source=tcp:camdenridgedbserver.database.windows.net,1433;Initial Catalog=CamdenRidge_db;User Id=billveldman@camdenridgedbserver;Password=Gazowrath12" />
+  </ItemGroup>
+</Project>

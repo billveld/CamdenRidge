@@ -56,6 +56,12 @@ textarea {
     background-size: cover;
 }
 
+.headerHome 
+{
+    height: 678px;
+    background-size:cover;
+}
+
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     color: #ffffff;
     background-color: #5292BF;

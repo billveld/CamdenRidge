@@ -24,6 +24,13 @@ namespace CamdenRidge.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        public DbSet<Document> Documents { get; set; }
+        public DbSet<Thread> Threads { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<Newsletter> Newsletters { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

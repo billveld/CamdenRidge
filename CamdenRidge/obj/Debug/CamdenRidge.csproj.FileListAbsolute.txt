@@ -67,10 +67,6 @@ c:\projects\CamdenRidge\CamdenRidge\bin\Microsoft.Owin.Security.MicrosoftAccount
 c:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.csprojResolveAssemblyReference.cache
 c:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.dll
 c:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.pdb
-c:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.Migrations.InitialCreate.resources
-c:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.csproj.GenerateResource.Cache
-c:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.Migrations.Address.resources
-c:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.Migrations.Name.resources
 C:\projects\CamdenRidge\CamdenRidge\bin\System.Net.Http.Formatting.dll
 C:\projects\CamdenRidge\CamdenRidge\bin\System.Net.Http.Formatting.xml
 C:\projects\CamdenRidge\CamdenRidge\bin\SendGrid.CSharp.HTTP.Client.dll
@@ -124,7 +120,7 @@ C:\projects\CamdenRidge\CamdenRidge\bin\ko\System.Spatial.resources.dll
 C:\projects\CamdenRidge\CamdenRidge\bin\ru\System.Spatial.resources.dll
 C:\projects\CamdenRidge\CamdenRidge\bin\zh-Hans\System.Spatial.resources.dll
 C:\projects\CamdenRidge\CamdenRidge\bin\zh-Hant\System.Spatial.resources.dll
-C:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.CamdenRidgeMigrations.InitialCreate.resources
-C:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.CamdenRidgeMigrations.Newsletters.resources
-C:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.CamdenRidgeMigrations.MoreNewsletters.resources
-C:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.CamdenRidgeMigrations.Newsletterstweaks.resources
+C:\projects\CamdenRidge\CamdenRidge\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\projects\CamdenRidge\CamdenRidge\bin\MonAgentListener.dll
+C:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.Migrations.Initial.resources
+C:\projects\CamdenRidge\CamdenRidge\obj\Debug\CamdenRidge.csproj.GenerateResource.Cache

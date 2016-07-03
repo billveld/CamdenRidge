@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using CamdenRidge.DAL;
+
 using CamdenRidge.Models;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.AspNet.Identity;
@@ -15,7 +15,7 @@ namespace CamdenRidge.Controllers
 {
     public class EventsController : Controller
     {
-        private CamdenRidgeContext db = new CamdenRidgeContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         private ApplicationUserManager _userManager;
         public ApplicationUserManager UserManager
@@ -156,7 +156,7 @@ namespace CamdenRidge.Controllers
             var userId = User.Identity.GetUserId();
             model.ShowAdminControls = UserManager.IsInRole(userId, "Admin") || UserManager.IsInRole(userId, "Board Member") || UserManager.IsInRole(userId, "AECC Member");
             DateTime now = DateTime.Now.AddDays(-1);
-            model.Events = db.Events.Where(x => x.Date > now && x.Display == true).ToList();
+            model.Events = db.Events.Where(x => x.Date > now && x.Display == true && (x.BoardAndCommmitteeOnly == false || model.ShowAdminControls == true)).ToList();
             
             return View(model);
         }
@@ -178,7 +178,7 @@ namespace CamdenRidge.Controllers
         
         public ActionResult NextEvent()
         {
-            var @event = db.Events.Where(x => x.Date > DateTime.Now).OrderBy(x=> x.Date).FirstOrDefault();
+            var @event = db.Events.Where(x => x.Date > DateTime.Now && x.BoardAndCommmitteeOnly == false).OrderBy(x=> x.Date).FirstOrDefault();
             if (@event == null)
             {
                 @event = new Event();
