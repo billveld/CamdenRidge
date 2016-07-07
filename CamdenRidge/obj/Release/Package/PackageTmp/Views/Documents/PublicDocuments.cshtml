@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CamdenRidge.Models.Document>
+
+@{
+    ViewBag.Title = "Documents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Public Documents</h2>
+
+<table class="data-table">
+@foreach (var category in Model.Select(x => x.Category).Distinct().ToList())
+{
+    <tr class="dirviewtitle">
+    <td>@Html.Raw(category)</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                @foreach (var item in Model.Where(x => x.Category == category).OrderBy(x=>x.Sequence).ToList())
+                {
+                    <li>
+                        <a href="@Html.Raw(item.Path)" target="_blank">
+                            @Html.Raw(item.Title)
+                        </a>
+                    </li>
+                }
+            </ul>
+        </td>
+    </tr>
+}
+   
+
+</table>

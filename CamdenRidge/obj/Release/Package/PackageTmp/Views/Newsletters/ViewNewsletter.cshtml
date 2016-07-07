@@ -1,0 +1,30 @@
+﻿@model CamdenRidge.Models.Newsletter
+
+@{
+    ViewBag.Title = "ViewNewsLetter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.Raw(Model.Title)</h2>
+
+<hr />
+@Html.DisplayFor(model => model.PublishDate)
+<br />
+
+
+
+<div class="row">
+    <div class="col-md-8">
+        <div>
+            @Html.DisplayFor(model => model.Body)
+        </div>
+    </div>
+    @if (Model.ImagePath != string.Empty)
+    {
+        <div class="col-md-4">
+            <div class="mnw-sidebar">
+                <div><img alt="" class="img-responsive" height="383" src="@Html.Raw(Model.ImagePath)" style="border-width: 0px; border-style: solid; float: right;" width="320"></div>
+            </div>
+        </div>
+    }
+</div>
