@@ -41,6 +41,8 @@ namespace CamdenRidge.Controllers
             model.sendToItemTypes.Add(new SelectListItem() { Text = Common.Constants.Management, Value = Common.Constants.Management });
             model.sendToItemTypes.Add(new SelectListItem() { Text = Common.Constants.Treasurer, Value = Common.Constants.Treasurer });
             model.sendToItemTypes.Add(new SelectListItem() { Text = Common.Constants.Secretary, Value = Common.Constants.Secretary });
+            model.sendToItemTypes.Add(new SelectListItem() { Text = Common.Constants.Landscaping, Value = Common.Constants.Landscaping });
+            model.sendToItemTypes.Add(new SelectListItem() { Text = Common.Constants.Website, Value = Common.Constants.Website });
             model.Sent = false;
             if (Request.IsAuthenticated)
             {
@@ -77,6 +79,12 @@ namespace CamdenRidge.Controllers
                     break;
                 case Common.Constants.Secretary:
                     distro = System.Configuration.ConfigurationManager.AppSettings["SecretaryDistro"].Split(',').ToList();
+                    break;
+                case Common.Constants.Landscaping:
+                    distro = System.Configuration.ConfigurationManager.AppSettings["LandscapingDistro"].Split(',').ToList();
+                    break;
+                case Common.Constants.Website:
+                    distro = System.Configuration.ConfigurationManager.AppSettings["WebsiteDistro"].Split(',').ToList();
                     break;
             }
 

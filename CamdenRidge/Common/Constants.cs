@@ -12,5 +12,7 @@ namespace CamdenRidge.Common
         public const string Management = "Management";
         public const string Treasurer = "Treasurer";
         public const string Secretary = "Secretary";
+        public const string Landscaping = "Landscaping Committee";
+        public const string Website = "Website Committee";
     }
 }

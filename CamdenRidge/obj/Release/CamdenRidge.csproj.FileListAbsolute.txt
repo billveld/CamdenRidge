@@ -123,3 +123,4 @@ C:\projects\CamdenRidge\CamdenRidge\obj\Release\CamdenRidge.Migrations.Initial.r
 C:\projects\CamdenRidge\CamdenRidge\obj\Release\CamdenRidge.csproj.GenerateResource.Cache
 C:\projects\CamdenRidge\CamdenRidge\obj\Release\CamdenRidge.dll
 C:\projects\CamdenRidge\CamdenRidge\obj\Release\CamdenRidge.pdb
+C:\projects\CamdenRidge\CamdenRidge\obj\Release\CamdenRidge.csprojResolveAssemblyReference.cache
