@@ -9,7 +9,7 @@ namespace CamdenRidge.Models
 {
     public class EditUserViewModel
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
 
         [Required]
         [Display(Name = "Name")]

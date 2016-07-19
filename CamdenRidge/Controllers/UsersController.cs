@@ -114,7 +114,7 @@ namespace CamdenRidge.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(EditUserViewModel model, params string[] selectedRoles)
+        public async Task<ActionResult> Edit(EditUserViewModel model, params string[] SelectedRole)
         {
             if (ModelState.IsValid)
             {
@@ -122,9 +122,9 @@ namespace CamdenRidge.Controllers
                 db.Entry(user).State = EntityState.Modified;
 
                 var userRoles = await UserManager.GetRolesAsync(user.Id);
-                selectedRoles = selectedRoles ?? new string[] { };
+                SelectedRole = SelectedRole ?? new string[] { };
                 var result = await UserManager.AddToRolesAsync(user.Id,
-                    selectedRoles.Except(userRoles).ToArray<string>());
+                    SelectedRole.Except(userRoles).ToArray<string>());
 
                 if (!result.Succeeded)
                 {
@@ -132,7 +132,7 @@ namespace CamdenRidge.Controllers
                     return View();
                 }
                 result = await UserManager.RemoveFromRolesAsync(user.Id,
-                    userRoles.Except(selectedRoles).ToArray<string>());
+                    userRoles.Except(SelectedRole).ToArray<string>());
                 if (!result.Succeeded)
                 {
                     ModelState.AddModelError("", result.Errors.First());
