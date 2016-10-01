@@ -29,6 +29,16 @@ namespace CamdenRidge.Controllers
             return View();
         }
 
+        public ActionResult RoswellInfo()
+        {
+            return View();
+        }
+
+        public ActionResult RoswellHistory()
+        {
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Please contact us with your thoughts, questions and suggestions.";

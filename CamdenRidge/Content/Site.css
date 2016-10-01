@@ -126,3 +126,18 @@ textarea {
 .data-table td {
     padding: 3px;
 }
+
+
+#mapsIframe
+{
+    margin: 0 auto;
+    display:block;
+}
+
+.sideImage
+{
+    float:right;
+    margin: 0px 0px 15px 20px;
+    height:172px;
+    width:268px;
+}
