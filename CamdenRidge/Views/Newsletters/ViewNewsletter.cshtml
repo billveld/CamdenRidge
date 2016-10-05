@@ -16,7 +16,7 @@
 <div class="row">
     <div class="col-md-8">
         <div>
-            @Html.DisplayFor(model => model.Body)
+            @Html.Raw(Model.Body)
         </div>
     </div>
     @if (Model.ImagePath != string.Empty)

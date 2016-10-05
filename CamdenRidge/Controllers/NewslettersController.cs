@@ -36,6 +36,7 @@ namespace CamdenRidge.Controllers
             {
                 return HttpNotFound();
             }
+            newsletter.Body.Replace("<br/>", Environment.NewLine);
             return View(newsletter);
         }
 
@@ -65,14 +66,16 @@ namespace CamdenRidge.Controllers
 
                 container.CreateIfNotExists();
                 container.SetPermissions(new BlobContainerPermissions { PublicAccess = BlobContainerPublicAccessType.Blob });
+                if (upload != null)
+                {
+                    // Retrieve reference to a blob named "myblob".
+                    CloudBlockBlob blockBlob = container.GetBlockBlobReference(upload.FileName);
+                    blockBlob.Properties.ContentType = upload.ContentType;
 
-                // Retrieve reference to a blob named "myblob".
-                CloudBlockBlob blockBlob = container.GetBlockBlobReference(upload.FileName);
-                blockBlob.Properties.ContentType = upload.ContentType;
-
-                blockBlob.UploadFromStream(upload.InputStream);
-                newsletter.ImagePath = blockBlob.Uri.ToString();
-
+                    blockBlob.UploadFromStream(upload.InputStream);
+                    newsletter.ImagePath = blockBlob.Uri.ToString();
+                }
+                newsletter.Body = newsletter.Body.Replace(Environment.NewLine, "<br/>");
                 db.Newsletters.Add(newsletter);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -93,6 +96,7 @@ namespace CamdenRidge.Controllers
             {
                 return HttpNotFound();
             }
+            newsletter.Body.Replace("<br/>", Environment.NewLine);
             return View(newsletter);
         }
 
@@ -105,6 +109,7 @@ namespace CamdenRidge.Controllers
         {
             if (ModelState.IsValid)
             {
+                newsletter.Body = newsletter.Body.Replace(Environment.NewLine, "<br/>");
                 db.Entry(newsletter).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
