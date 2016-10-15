@@ -119,7 +119,7 @@ namespace CamdenRidge.Controllers
             String ret = mail.Get();
 
             string requestBody = ret;
-            dynamic response = sg.client.mail.send.beta.post(requestBody: requestBody);
+            dynamic response =  sg.client.mail.send.post(requestBody: requestBody);
 
             
             model.Sent = true;

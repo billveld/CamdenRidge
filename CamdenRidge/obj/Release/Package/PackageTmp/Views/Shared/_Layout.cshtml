@@ -39,7 +39,11 @@
             </div>
         </div>
     <div id="hero">
-        <div class="headerInner" style="background-image:url(/Images/header_inner.jpg)"></div>
+        @{
+            int rnd = new System.Random().Next(1, 4);
+            string image = "/Images/header_inner" + rnd.ToString() + ".png";
+        }
+        <div class="headerInner" style="background-image:url(@image)"></div>
     </div>
     <div class="container body-content">
         @RenderBody()

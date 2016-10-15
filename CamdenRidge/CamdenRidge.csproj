@@ -253,8 +253,12 @@
     <Content Include="Images\dam.jpg" />
     <Content Include="Images\Dining.jpg" />
     <Content Include="Images\hall.jpg" />
+    <Content Include="Images\header.png" />
     <Content Include="Images\header1a.jpg" />
     <Content Include="Images\header_inner.jpg" />
+    <Content Include="Images\header_inner1.png" />
+    <Content Include="Images\header_inner2.png" />
+    <Content Include="Images\header_inner3.png" />
     <Content Include="Images\house.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
